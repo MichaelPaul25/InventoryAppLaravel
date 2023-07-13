@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\LoginComponent;
 
+use App\Http\Livewire\HomeComponent;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +17,10 @@ use App\Http\Livewire\LoginComponent;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+//  Route::get('/', function () {
+//      return view('welcome');
+//  });
 
 Route::get('/', LoginComponent::class)->name('login');
+
+Route::get('/home', HomeComponent::class)->name('home');
